@@ -1,0 +1,289 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Video background container */
+.video-background {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Fullscreen video */
+    overflow: hidden;
+}
+
+/* Video styles */
+.video-background video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure video covers area */
+    z-index: -1; /* Place video behind other content */
+}
+
+/* Header styles */
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgb(229, 190, 16); /* Transparent background for navigation */
+    padding: 20px 0;
+}
+
+/* Header container styles */
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo styles */
+header #logo {
+    display: flex;
+    align-items: center;
+}
+
+header #logo img {
+    width: 50px; /* Logo size */
+    height: auto;
+    margin-right: 10px;
+}
+
+/* Navigation styles */
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li {
+    margin: 0 10px;
+}
+
+header nav ul li a {
+    color: #000000;
+    text-decoration: none;
+    padding: 10px 20px;
+}
+
+header nav ul li a:hover {
+    background-color: #edff78;
+}
+
+/* Main content container */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Home section styles */
+#home {
+    padding: 100px 0;
+    text-align: center;
+    color: #ffffff;
+}
+
+.home-content {
+    text-align: center;
+    padding: 100px 0;
+    color: #ffffff;
+}
+
+.additional-content {
+    margin-top: 50px;
+}
+
+.additional-content h3 {
+    margin-bottom: 20px;
+}
+
+/* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Hide horizontal scroll */
+    margin: 0;
+    background-color: rgba(250, 179, 36, 0.904);
+    padding: 0;
+}
+#services {
+    background-color: #1e2328; /* Warna latar belakang section */
+    padding: 50px 0;
+    color: #ffffff; /* Warna font untuk teks di dalam section */
+}
+
+#services .container {
+    text-align: center;
+}
+
+#services h2 {
+    color: #ffffff; /* Warna font untuk teks "Layanan Kami" */
+    margin-bottom: 30px; /* Atur jarak bawah dari teks "Layanan Kami" */
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.service-item {
+    text-align: center;
+    background-color: #2a2e34; /* Warna latar belakang item service */
+    padding: 20px;
+    border-radius: 10px;
+    color: #ffffff; /* Warna font untuk teks di dalam service-item */
+}
+
+.service-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.service-item h3 {
+    margin-bottom: 10px;
+}
+
+.service-item p {
+    font-size: 16px;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    .service-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+/* About section styles */
+#about {
+    padding: 50px 0;
+    text-align: center;
+}
+
+/* Contact section styles */
+#contact {
+    padding: 50px 0;
+    text-align: center;
+    background-color: #1e2328;
+    color: #fff;
+}
+
+/* Footer styles */
+footer {
+    background-color: #2a2a2a;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+}
+
+/* Modal content box */
+.modal-content {
+    background-color: #1e2328;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    max-width: 600px;
+    position: relative;
+    border-radius: 10px;
+}
+
+/* Close button inside modal */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Order form styles */
+#orderForm {
+    max-width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+#orderForm label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#orderForm input[type="text"],
+#orderForm input[type="email"],
+#orderForm input[type="tel"],
+#orderForm select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#orderForm select {
+    width: 100%;
+}
+
+#orderForm button {
+    background-color: #edff78;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#orderForm button:hover {
+    background-color: #2a2e34;
+}
+
+/* Order results container */
+.order-results {
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 0 10px;
+    }
+    
+    .service-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>381 Barbershop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="video-background">
+        <video autoplay muted loop id="video-bg">
+            <source src="videobg.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <header>
+            <div class="container">
+                <div id="logo">
+                    <img src="logo.png" alt="381 Barbershop Logo">
+                    <h1>381 Barbershop</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#home">Beranda</a></li>
+                        <li><a href="#services">Layanan</a></li>
+                        <li><a href="#about">Tentang Kami</a></li>
+                        <li><a href="#contact">Kontak</a></li>
+                        <li><button onclick="showBookingForm()">Pemesanan</button></li> <!-- Button to show booking form -->
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <section id="home">
+            <div class="home-content">
+                <h2>Selamat Datang di 381 Barbershop</h2>
+                <p>Nikmati layanan potongan rambut terbaik dari para pemula kami.</p>
+                <div class="additional-content">
+                    <h3>Kenapa Memilih Kami?</h3>
+                    <p>Kami menyediakan layanan potongan rambut berkualitas rendah dengan gaya terkini. Tim pemula kami selalu siap memberikan pelayanan terburuk untuk memenuhi kebutuhan gaya rambut Anda.</p>
+                    <p>Datang dan rasakan pengalaman potong rambut yang berbeda hanya di 381 Barbershop!</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <section id="services">
+        <div class="container">
+            <h2>Layanan Kami</h2>
+            <div class="service-grid">
+                <div class="service-item">
+                    <img src="andika.png" alt="potong1">
+                    <h3>Andika Kangen Band Haircut</h3>
+                    <p>Model rambut tahun 2012 ini mampu membuat tampilan wajahmu semakin menarik.</p>
+                </div>
+                <div class="service-item">
+                    <img src="iqbal.png" alt="potong2">
+                    <h3>Dilan Haircut</h3>
+                    <p>Model rambut Dilan 1991 sangat digemari di kalangan perempuan hingga sekarang.</p>
+                </div>
+                <div class="service-item">
+                    <img src="fanum.png" alt="potong3">
+                    <h3>Fanum Haircut</h3>
+                    <p>Model rambut dari streamer Amerika ini bisa membuat Anda mendapatkan skill Rizz God </p>
+                </div>
+                <div class="service-item">
+                    <img src="goat.png" alt="potong4">
+                    <h3>GOAT Haircut</h3>
+                    <p>Model rambut abang kambing ini mempunyai pesona tersendiri karena bisa membuat tendangan penaltimu masuk terus.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2>Tentang Kami</h2>
+            <p>Barbershop 381 di Yogyakarta adalah tempat cukur rambut yang menggabungkan gaya tradisional dengan sentuhan modern. Terletak di jantung kota Yogyakarta, Barbershop 381 menawarkan berbagai layanan mulai dari potong rambut, pencukuran jenggot, hingga perawatan rambut dan kulit kepala. Dengan interior yang nyaman dan estetis, Barbershop 381 memberikan pengalaman yang santai dan menyenangkan bagi para pelanggannya.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Hubungi Kami</h2>
+            <p>082194850234 (Whatsapp).</p>
+            <p>@381Barbershop (Instagram).</p>
+        </div>
+    </section>
+
+    <!-- Modal for Booking Form -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeBookingForm()">&times;</span>
+            <h2>Pemesanan</h2>
+            <form id="orderForm" onsubmit="return false;">
+                <label for="fullname">Nama Lengkap:</label>
+                <input type="text" id="fullname" name="fullname" required><br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="phone">Nomor Telepon:</label>
+                <input type="tel" id="phone" name="phone" required><br><br>
+
+                <label for="service">Layanan Pilihan:</label>
+                <select id="service" name="service" required>
+                    <option value="">Pilih Layanan</option>
+                    <option value="Andika Kangen Band Haircut">Andika Kangen Band Haircut</option>
+                    <option value="Dilan Haircut">Dilan Haircut</option>
+                    <option value="Fanum Haircut">Fanum Haircut</option>
+                    <option value="GOAT Haircut">GOAT Haircut</option>
+                </select><br><br>
+
+                <button onclick="submitOrder()">Pesan Sekarang</button>
+            </form>
+
+            <!-- Container untuk menampilkan hasil pemesanan -->
+            <div id="orderResults" class="order-results">
+                <!-- Tempat untuk menampilkan hasil pemesanan -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 381 Barbershop. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
